@@ -2,20 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 
 // components
-
 import Phone from '../components/phone'
 
-const Phoneholder = () => (
-  <MainHolder>
-    <BodyOne>
-      <BodyTwo>
-        <PhoneBackground>
-          <Phone />
-        </PhoneBackground>
-      </BodyTwo>
-    </BodyOne>
-  </MainHolder>
-)
+// hooks
+import { useAuth } from '../hooks'
+
+const Phoneholder = () => {
+  const { authContext } = useAuth()
+
+  const { currentUser, mobileToSignIn } = authContext
+
+  return (
+    <MainHolder currentUser={currentUser} mobileToSignIn={mobileToSignIn}>
+      <BodyOne>
+        <BodyTwo>
+          <PhoneBackground>
+            <Phone />
+          </PhoneBackground>
+        </BodyTwo>
+      </BodyOne>
+    </MainHolder>
+  )
+}
 
 export default Phoneholder
 
@@ -24,6 +32,8 @@ const MainHolder = styled.div`
   align-content: center;
   justify-content: center;
   @media (max-width: 768px) {
+    display: ${({ currentUser, mobileToSignIn }) =>
+      currentUser || mobileToSignIn ? 'grid' : 'none'};
     height: 100vh;
   }
 `
@@ -64,5 +74,6 @@ const PhoneBackground = styled.div`
   @media (max-width: 768px) {
     background-color: transparent;
     height: 100vh;
+    width: 100vw;
   }
 `

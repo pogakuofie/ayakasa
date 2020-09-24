@@ -11,6 +11,7 @@ import VerifyNumber from './verifyNumber'
 import ProvideNumber from './provideNumber'
 import BasicInfo from './basicInfo'
 import Home from './home'
+import { Logo } from '../common'
 
 // assets
 const LogoImage = require('../../assets/images/logo.png')
@@ -136,14 +137,6 @@ const InnerHolder = styled.div`
   grid-area: main;
 `
 
-const Logo = styled.img`
-  height: 100px;
-  justify-self: center;
-  width: 100px;
-  margin: 5px;
-  grid-area: logo;
-`
-
 const Load = styled.div`
   display: grid;
   justify-content: center;
@@ -151,6 +144,12 @@ const Load = styled.div`
   z-index: 1;
   background-color: white;
   border-radius: 30px;
+  @media (max-width: 768px) {
+    display: ${({ currentUser, mobileToSignIn }) => {
+      return currentUser || mobileToSignIn ? 'none' : 'grid'
+    }};
+    border-radius: 0px;
+  }
 `
 
 export default withTranslation()(Phone)

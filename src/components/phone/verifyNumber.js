@@ -10,7 +10,7 @@ import {
   Description,
   NumberInput,
   ActionText,
-} from './common'
+} from '../common'
 
 const VerifyNumber = ({
   primaryFont,

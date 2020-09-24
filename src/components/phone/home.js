@@ -11,7 +11,7 @@ import {
   NumberInput,
   TextArea,
   Description,
-} from './common'
+} from '../common'
 
 // context
 import {
@@ -22,7 +22,6 @@ import {
 const Home = ({ primaryFont, countryCode, setCountryCode }) => {
   const { t } = useTranslation()
   const { smsContext } = useSMS()
-  // const { authContext } = useAuth()
 
   const {
     recipientNumber,
@@ -35,8 +34,6 @@ const Home = ({ primaryFont, countryCode, setCountryCode }) => {
     isLoading,
     smsBody,
   } = smsContext
-
-  // const { signOut } = authContext
 
   return (
     <InnerHolderVerify>

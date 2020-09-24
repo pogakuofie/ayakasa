@@ -1,52 +1,40 @@
 import React from 'react'
-import { withTranslation } from 'react-i18next'
+import { withTranslation, Trans } from 'react-i18next'
 import styled from 'styled-components'
 
+// compoonents
+import { Description, ActionButton, Logo } from '../../components/common'
+
 // hooks
-// import { useTheme, useAuth } from '../../hooks'
+import { useAuth } from '../../hooks'
+
+// assets
+const LogoImage = require('../../assets/images/logo.png')
 
 const Dashboard = () => {
-  // const { themeContext, theme } = useTheme()
-  // const { authContext } = useAuth()
+  const { authContext } = useAuth()
 
-  // const { signOut, signIn } = authContext
-
-  // const primaryFont = theme[themeContext.activeTheme]?.fonts.primary
+  const { currentUser, mobileToSignIn, setMobileToSignIn } = authContext
 
   return (
-    <MainHolder>
-      {/* <Header font={primaryFont}> send sms for free!</Header>
-      <Description font={primaryFont}>
-        SEND, SAVE AND MANAGE YOUR CONTACTS, ALL IN ONE PLACE.
+    <MainHolder currentUser={currentUser} mobileToSignIn={mobileToSignIn}>
+      <MobileHolder>
+        <Logo alt="Logo" src={LogoImage} />
+      </MobileHolder>
+
+      <Description size={35} lineHeight={55}>
+        <Trans>txt_message</Trans>
       </Description>
-      <SubMessage font={primaryFont}>
-        <Trans>paragraph</Trans>
-      </SubMessage>
-      <button
-        id="sign-in-button"
-        type="submit"
-        onClick={signIn}
-        style={{
-          fontFamily: primaryFont,
-          fontSize: 18,
-          color: '#4F5EB2',
-          width: 300,
-        }}
-      >
-        sign in
-      </button>
-      <button
-        type="submit"
-        onClick={signOut}
-        style={{
-          fontFamily: primaryFont,
-          fontSize: 18,
-          color: '#4F5EB2',
-          width: 300,
-        }}
-      >
-        sign out
-      </button> */}
+
+      <MobileHolder>
+        <ActionButton
+          onClick={() => {
+            setMobileToSignIn(true)
+          }}
+        >
+          <Trans>sign_in</Trans>
+        </ActionButton>
+      </MobileHolder>
     </MainHolder>
   )
 }
@@ -55,23 +43,22 @@ export default withTranslation()(Dashboard)
 
 const MainHolder = styled.div`
   display: grid;
+  align-items: center;
+  justify-items: center;
   @media (max-width: 768px) {
-    display: none;
+    display: ${({ currentUser, mobileToSignIn }) => {
+      return currentUser || mobileToSignIn ? 'none' : 'grid'
+    }};
+    grid-auto-flow: rows;
   }
 `
 
-// const Description = styled.p`
-//   font-family: ${(props) => props.font};
-//   font-size: 18px;
-//   color: #4f5eb2;
-// `
-
-// const SubMessage = styled.p`
-//   font-family: ${(props) => props.font};
-// `
-
-// const Header = styled.h1`
-//   font-size: 80px;
-//   color: blue;
-//   font-family: ${(props) => props.font};
-// `
+const MobileHolder = styled.div`
+  display: none;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  @media (max-width: 768px) {
+    display: grid;
+  }
+`

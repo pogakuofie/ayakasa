@@ -4,7 +4,7 @@ import { withTranslation, Trans } from 'react-i18next'
 import PropTypes from 'prop-types'
 
 // compoonents
-import { HeadMSG, ActionButton, NumberInput } from './common'
+import { HeadMSG, ActionButton, NumberInput } from '../common'
 
 const BasicInfo = ({
   primaryFont,
