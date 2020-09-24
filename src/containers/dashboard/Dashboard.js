@@ -55,6 +55,9 @@ export default withTranslation()(Dashboard)
 
 const MainHolder = styled.div`
   display: grid;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 // const Description = styled.p`

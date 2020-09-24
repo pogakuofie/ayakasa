@@ -73,11 +73,14 @@ const Body = styled.div`
   display: grid;
   grid-tempelate-rows: 1fr;
   height: 100vh;
+  margin: 0px;
 `
 
 const MainHolder = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
   background-color: #e8edef;
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
 `

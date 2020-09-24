@@ -26,10 +26,18 @@ const MainHolder = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
   padding: 20px;
+  @media (max-width: 768px) {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+  }
 `
 
 const InnerHolder = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 3fr 2fr;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
 `

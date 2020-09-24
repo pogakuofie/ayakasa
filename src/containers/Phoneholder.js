@@ -23,6 +23,9 @@ const MainHolder = styled.div`
   display: grid;
   align-content: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
 `
 
 const BodyOne = styled.div`
@@ -31,15 +34,25 @@ const BodyOne = styled.div`
   width: 360px;
   background-color: #626368;
   border-radius: 30px;
+  @media (max-width: 768px) {
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+  }
 `
 
 const BodyTwo = styled.div`
   height: 700px;
   width: 350px;
   border-radius: 30px;
-  padding: 5;
+  padding: 5px;
   align-self: center;
   justify-self: center;
+  @media (max-width: 768px) {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+  }
 `
 
 const PhoneBackground = styled.div`
@@ -48,4 +61,8 @@ const PhoneBackground = styled.div`
   width: 100%;
   border-radius: 30px;
   background-color: white;
+  @media (max-width: 768px) {
+    background-color: transparent;
+    height: 100vh;
+  }
 `
