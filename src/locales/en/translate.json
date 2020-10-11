@@ -19,9 +19,11 @@
     "edit": "Edit",
     "compose_msg": "Compose your message.",
     "recipient": "Recipient",
-    "txt_message": "Please enter your message above.",
+    "welcome_message": "Simplify customer service",
     "send": "Send",
     "sending": "Sending",
-    "sign_in": "Sign In"
+    "sign_in": "Sign In",
+    "welcome_sub_message": "Meet your customers where they want to engage. Bring the conversation to new digital channels",
+    "txt_message": "Please enter your message here."
   }
 }

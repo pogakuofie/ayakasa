@@ -3,7 +3,7 @@ import { withTranslation, Trans } from 'react-i18next'
 import styled from 'styled-components'
 
 // compoonents
-import { Description, ActionButton, Logo } from '../../components/common'
+import { Description, ActionButton, Logo, Box } from '../../components/common'
 
 // hooks
 import { useAuth } from '../../hooks'
@@ -22,9 +22,14 @@ const Dashboard = () => {
         <Logo alt="Logo" src={LogoImage} />
       </MobileHolder>
 
-      <Description size={35} lineHeight={55}>
-        <Trans>txt_message</Trans>
-      </Description>
+      <Box>
+        <Description size={30} lineHeight={50}>
+          <Trans>welcome_message</Trans>
+        </Description>
+        <Description size={15} lineHeight={25}>
+          <Trans>welcome_sub_message</Trans>
+        </Description>
+      </Box>
 
       <MobileHolder>
         <ActionButton
