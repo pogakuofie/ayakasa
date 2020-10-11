@@ -10,7 +10,9 @@ const Home = () => (
   <MainHolder>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Ayakasa - Bulk SMS, Consumer Marketing, Analytics.</title>
+      <title>
+        Ayakasa - Consumer Engagement, Success &amp; Marketing, Analytics, Bulk SMS
+      </title>
       <link rel="canonical" href="http://ayakasa.com/about" />
     </Helmet>
     <InnerHolder>
