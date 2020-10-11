@@ -82,6 +82,10 @@ const Note = styled.label`
   color: ${(props) => props.color};
 `
 
+const Box = styled.div`
+  padding: 10px;
+`
+
 export {
   HeadMSG,
   Note,
@@ -92,4 +96,5 @@ export {
   NumberBox,
   TextArea,
   Logo,
+  Box,
 }

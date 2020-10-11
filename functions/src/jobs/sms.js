@@ -26,6 +26,8 @@ module.exports = functions.firestore
 
       const smsFullBody = `From ${name},\n\n${smsBody}\n\nSent from ayakasa.com, send SMS for free!`
 
+      console.log(functions.config().mnotify.key)
+
       const url = `https://apps.mnotify.net/smsapi?key=${
         functions.config().mnotify.key
       }&to=${recipientNumber.substr(1)}&msg=${smsFullBody}&sender_id=${'ayakasa'}`
@@ -33,8 +35,12 @@ module.exports = functions.firestore
       axios
         .get(url)
         .then((res) => {
+          const { data } = res
+          console.log(data)
           return ''
         })
-        .catch(() => {})
+        .catch((e) => {
+          console.log(e)
+        })
     }
   })

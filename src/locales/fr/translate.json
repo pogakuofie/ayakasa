@@ -19,9 +19,11 @@
     "edit": "Éditer",
     "compose_msg": "Composez votre message.",
     "recipient": "Destinataire",
-    "txt_message": "Veuillez entrer votre message ci-dessus.",
+    "welcome_message": "Simplifiez le service client",
     "send": "Envoyer",
     "sending": "Envoi en cours",
-    "sign_in": "Se connecter"
+    "sign_in": "Se connecter",
+    "welcome_sub_message": "Rencontrez vos clients là où ils souhaitent s'engager. Amenez la conversation sur de nouveaux canaux numériques",
+    "txt_message": "Veuillez entrer votre message ici."
   }
 }

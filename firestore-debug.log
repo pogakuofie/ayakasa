@@ -5,30 +5,30 @@ If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment
 
 Dev App Server is now running.
 
-Aug 30, 2020 6:11:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:48:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:11:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:48:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected HTTP/2 connection.
-Aug 30, 2020 6:11:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:48:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:11:38 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:48:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:07 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:07 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:05 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:07 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:06 PM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+Oct 11, 2020 10:53:08 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
 WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
-TypeError: Cannot destructure property `address` of 'undefined' or 'null'.
-    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:10:55)
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
     at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
     at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
     at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
@@ -38,15 +38,115 @@ TypeError: Cannot destructure property `address` of 'undefined' or 'null'.
     at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
     at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
     at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
-Aug 30, 2020 6:16:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:33 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
+    at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
+    at Generator.next (<anonymous>)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
+Oct 11, 2020 10:53:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Oct 11, 2020 10:53:45 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
+    at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
+    at Generator.next (<anonymous>)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
+Oct 11, 2020 10:53:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 30, 2020 6:16:17 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
+Oct 11, 2020 10:53:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:53:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:53:57 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
+    at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
+    at Generator.next (<anonymous>)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
+Oct 11, 2020 10:53:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:54:00 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
+    at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
+    at Generator.next (<anonymous>)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
+Oct 11, 2020 10:54:05 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:54:06 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/welcomeMail: 500 Internal Server Error
+TypeError: Cannot read property 'trim' of undefined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/welcomeMail.js:22:27)
+    at cloudFunction (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/node_modules/firebase-functions/lib/cloud-functions.js:132:23)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:563:20)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:548:19
+    at Generator.next (<anonymous>)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:12)
+    at runFunction (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:545:12)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:562:15
+Oct 11, 2020 10:54:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:04 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Oct 11, 2020 10:55:04 AM com.google.cloud.datastore.emulator.impl.events.FunctionsEmulatorEventPublisher sendHttpRequest
+WARNING: Unsuccessful HTTP response when publishing event for projects/ayakasa-53965/triggers/sms: 500 Internal Server Error
+ReferenceError: consolee is not defined
+    at module.exports.functions.firestore.document.onWrite (/Users/pogah/Files/Poga Kuofie/Port/Web/ayakasa/code/functions/src/jobs/sms.js:29:7)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Oct 11, 2020 10:55:05 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:55:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Oct 11, 2020 10:56:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:56:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:56:45 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
 INFO: channel closed
-Aug 30, 2020 6:16:17 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
-*** shutting down gRPC server since JVM is shutting down
-*** server shut down
+Oct 11, 2020 10:57:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Oct 11, 2020 10:58:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
