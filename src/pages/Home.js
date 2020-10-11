@@ -10,7 +10,9 @@ const Home = () => (
   <MainHolder>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Ayakasa - Bulk SMS, Consumer Marketing, Analytics.</title>
+      <title>
+        Ayakasa - Consumer Engagement, Success &amp; Marketing, Analytics, Bulk SMS
+      </title>
       <link rel="canonical" href="http://ayakasa.com/about" />
     </Helmet>
     <InnerHolder>
@@ -24,12 +26,17 @@ export default Home
 
 const MainHolder = styled.div`
   display: grid;
-  grid-template-rows: 1fr auto;
-  padding: 20px;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
 `
 
 const InnerHolder = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 3fr 2fr;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
 `

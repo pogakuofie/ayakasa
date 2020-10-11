@@ -39,6 +39,9 @@ const MainHolder = styled.div`
   grid-template-columns: auto auto auto;
   padding: 10px;
   justify-content: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const Menu = styled.p`

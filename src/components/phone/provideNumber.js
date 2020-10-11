@@ -4,10 +4,16 @@ import { withTranslation, Trans } from 'react-i18next'
 import PropTypes from 'prop-types'
 
 // compoonents
-import { HeadMSG, ActionButton, Description, NumberInput, NumberBox } from './common'
+import {
+  HeadMSG,
+  ActionButton,
+  Description,
+  NumberInput,
+  NumberBox,
+  Note,
+} from '../common'
 
 const ProvideNumber = ({
-  primaryFont,
   validatePhoneNumber,
   phoneNumValid,
   setPhoneNumber,
@@ -23,7 +29,7 @@ const ProvideNumber = ({
 
   return (
     <InnerHolderNumber>
-      <HeadMSG font={primaryFont}>
+      <HeadMSG>
         <Trans>provide_number_head_msg</Trans>
       </HeadMSG>
       <NumberBox>
@@ -34,7 +40,6 @@ const ProvideNumber = ({
           type="text"
           value={countryCode}
           margin="15px 0px 15px 15px"
-          font={primaryFont}
           onChange={() => {
             setCountryCode('+233')
           }}
@@ -44,7 +49,6 @@ const ProvideNumber = ({
           size={10}
           hasError={!phoneNumValid}
           type="text"
-          font={primaryFont}
           value={phoneNumber}
           onChange={(e) => {
             const number = e.target.value.replace(/[^0-9]/g, '')
@@ -52,13 +56,12 @@ const ProvideNumber = ({
           }}
         />
       </NumberBox>
-      <Description font={primaryFont}>
+      <Description>
         <Trans>provide_number_description</Trans>
       </Description>
       <RecaptchaHolder id="recaptcha-container" />
       <ActionButton
         id="send-code"
-        font={primaryFont}
         onClick={() => {
           validatePhoneNumber()
           if (!termsCheckBox.current.checked) setTermsAgreedLoacal(false)
@@ -68,11 +71,7 @@ const ProvideNumber = ({
         <Trans>next</Trans>
       </ActionButton>
       <PrivacyHolder>
-        <Note
-          font={primaryFont}
-          htmlFor="terms"
-          color={termsAgreedLoacal ? 'black' : 'red'}
-        >
+        <Note htmlFor="terms" color={termsAgreedLoacal ? 'black' : 'red'}>
           <Trans>privacy_policy</Trans>
         </Note>
         <AgreeCheck
@@ -92,14 +91,9 @@ const ProvideNumber = ({
 const RecaptchaHolder = styled.div`
   margin: 15px;
   justify-self: center;
-`
-
-const Note = styled.label`
-  font-family: ${({ font }) => font};
-  font-size: 11px;
-  line-height: 16px;
-  margin: 0px;
-  color: ${(props) => props.color};
+  @media (max-width: 768px) {
+    width: 84vw;
+  }
 `
 
 const PrivacyHolder = styled.div`
@@ -120,7 +114,6 @@ ProvideNumber.defaultProps = { phoneNumValid: true, recaptchaLoading: false }
 export default withTranslation()(ProvideNumber)
 
 ProvideNumber.propTypes = {
-  primaryFont: PropTypes.string.isRequired,
   setPhoneNumber: PropTypes.func.isRequired,
   validatePhoneNumber: PropTypes.func.isRequired,
   setTermsAgreed: PropTypes.func.isRequired,

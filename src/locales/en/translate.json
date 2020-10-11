@@ -21,6 +21,7 @@
     "recipient": "Recipient",
     "txt_message": "Please enter your message above.",
     "send": "Send",
-    "sending": "Sending"
+    "sending": "Sending",
+    "sign_in": "Sign In"
   }
 }

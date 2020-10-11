@@ -22,6 +22,7 @@ const Provider = ({ children }) => {
   const [codeValid, setCodeValid] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
   const [emailValid, setEmailValid] = useState(false)
+  const [mobileToSignIn, setMobileToSignIn] = useState(false)
   const [nameValid, setNameValid] = useState(false)
   const [recaptchaLoading, setRecaptchaLoading] = useState(false)
 
@@ -213,6 +214,8 @@ const Provider = ({ children }) => {
         setOtpSent,
         setUserVerified,
         recaptchaLoading,
+        mobileToSignIn,
+        setMobileToSignIn,
       }}
     >
       {children}

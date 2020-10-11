@@ -21,6 +21,7 @@
     "recipient": "Destinataire",
     "txt_message": "Veuillez entrer votre message ci-dessus.",
     "send": "Envoyer",
-    "sending": "Envoi en cours"
+    "sending": "Envoi en cours",
+    "sign_in": "Se connecter"
   }
 }
